@@ -76,12 +76,20 @@ const Navbar = () => {
         
 
         {isMenuOpen && (
-        <div className="md:hidden bg-primary text-white p-4  -mt-6 mr-10   w-full h-56 fixed">
-          <li className="cursor-pointer mt-4  hover:text-gray-400">Home</li>
-          <li className="cursor-pointer mt-4  hover:text-gray-400">Collection</li>
-          <li className="cursor-pointer mt-4  hover:text-gray-400">About us</li>
-          <li className="cursor-pointer mt-4  hover:text-gray-400">Contact Us</li>
-        </div>
+        <div className="md:hidden bg-primary text-white p-4 w-full h-56 fixed top-0 left-0 flex flex-col items-center justify-center">
+        <NavLink to="/" className="cursor-pointer mt-4 hover:text-gray-400">
+          Home
+        </NavLink>
+        <NavLink to="/collection" className="cursor-pointer mt-4 hover:text-gray-400">
+          Collection
+        </NavLink>
+        <NavLink to="/about" className="cursor-pointer mt-4 hover:text-gray-400">
+          About Us
+        </NavLink>
+        <NavLink to="/contact" className="cursor-pointer mt-4 hover:text-gray-400">
+          Contact Us
+        </NavLink>
+      </div>
       )}
     </div>
   )
