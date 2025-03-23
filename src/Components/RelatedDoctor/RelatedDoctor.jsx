@@ -20,7 +20,7 @@ const RelatedDoctor = ({ speciality, docId }) => {
             <h1 className='text-3xl font-bold text-center'>Related Doctors</h1>
             <p className='font-normal text-center text-gray-600'>Simply browse through our extensive list of trusted doctors.</p>
             
-            <div className='w-full mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6'>
+            <div className='w-full mt-10 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6'>
                 {relDoc.slice(0, 5).map((item, index) => (
                     <div 
                         key={index} 

@@ -49,11 +49,16 @@ const MyProfile = () => {
 
       <div className="mt-4 space-y-4">
         <div>
-          <h3 className="text-lg font-semibold text-gray-700">Contact Information</h3>
+          <h3 className="text-lg font-semibold text-gray-700">CONTACT INFORMATIONS</h3>
           <div className="mt-2 text-gray-600">
-            <p>Email: {userData.email}</p>
-            <p>
-              Phone: {isEdit ? (
+            <p className="mt-10">EMAIL:
+              <span className="ml-20">{userData.email}</span>
+              </p>
+<hr className="mt-4"/>
+            <p className="mt-8">
+              PHONE:
+              <span className="ml-16">
+              {isEdit ? (
                 <input
                   type="text"
                   value={userData.phone}
@@ -65,9 +70,14 @@ const MyProfile = () => {
               ) : (
                 userData.phone
               )}
+              </span>
+             
             </p>
-            <p>
-              Address: {isEdit ? (
+            <hr className="mt-4"/>
+            <p className="mt-8">
+              ADDRESS:
+              <span className="ml-15">
+              {isEdit ? (
                 <div>
                   <input
                     type="text"
@@ -97,15 +107,21 @@ const MyProfile = () => {
                   {userData.address.line1}, {userData.address.line2}
                 </span>
               )}
+              </span>
+            
             </p>
+           
           </div>
         </div>
 
         <div>
-          <h3 className="text-lg font-semibold text-gray-700">Basic Information</h3>
+          <h3 className="text-lg font-semibold text-gray-700">BASIC INFORMATIONS</h3>
           <div className="mt-2 text-gray-600">
-            <p>
-              Gender: {isEdit ? (
+            <p className="mt-8">
+              
+              GENDER:
+              <span className="ml-20">
+              {isEdit ? (
                 <select
                   value={userData.gender}
                   onChange={(e) =>
@@ -119,9 +135,14 @@ const MyProfile = () => {
               ) : (
                 userData.gender
               )}
+              </span>
+              
             </p>
-            <p>
-              Date of Birth: {isEdit ? (
+            <hr className="mt-4"/>
+            <p className="mt-8">
+              DATE OF BIRTH:
+              <span className="ml-10">
+              {isEdit ? (
                 <input
                   type="date"
                   value={userData.dob}
@@ -133,6 +154,8 @@ const MyProfile = () => {
               ) : (
                 userData.dob
               )}
+              </span>
+              
             </p>
           </div>
         </div>

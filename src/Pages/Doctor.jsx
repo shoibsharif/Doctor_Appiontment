@@ -32,7 +32,7 @@ const Doctor = () => {
         <p onClick={() => speciality === 'Neurologist' ? Navigate('/Doctor') : Navigate("/Doctor/Neurologist")} className={`border py-1 px-6 w-full md:w-40 flex text-[13px] rounded-lg cursor-pointer border-gray-300 mt-3 ${speciality === 'Neurologist' ? "bg-indigo-100 text-black" : ""}`}>Neurologist</p>
         <p onClick={() => speciality === 'Gastroenterologist' ? Navigate('/Doctor') : Navigate("/Doctor/Gastroenterologist")} className={`border py-1 px-6 w-full md:w-40 flex text-[13px] rounded-lg cursor-pointer border-gray-300 mt-3 ${speciality === 'Gastroenterologist' ? "bg-indigo-100 text-black" : ""}`}>Gastroenterologist</p>
       </div>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 w-full'>
+      <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 w-full'>
         {filterdoc.length > 0 ? (
           filterdoc.map((item) => (
             <div onClick={() => Navigate(`/Appiontment/${item._id}`)} key={item._id || item.name} className='cursor-pointer'>

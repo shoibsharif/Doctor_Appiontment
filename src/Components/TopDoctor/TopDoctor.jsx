@@ -15,7 +15,7 @@ const { doctors} = useContext(AppContext)
             <p className='text-center mt-3'>Simply browse through our extensive list of trusted doctors.</p>
         </div>
         {/* Responsive Grid Layout */}
-        <div className='w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 pt-5 gap-y-6 px-4 sm:px-0'>
+        <div className='w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 pt-5 gap-y-6 px-4 sm:px-0'>
             {
                 doctors.slice(0,10).map((item,index)=>(
                     <div onClick={()=>navigate(`/Appiontment/${item._id }`)} key={index}>

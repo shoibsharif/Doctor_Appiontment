@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import {assets} from "../../assets/assets_frontend/assets"
 import {   FiMenu } from "react-icons/fi";
 import { NavLink, useNavigate } from 'react-router-dom'
+// import { RxCross2 } from "react-icons/rx";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -75,22 +76,29 @@ const Navbar = () => {
         </div>
         
 
-        {isMenuOpen && (
-        <div className="md:hidden bg-primary text-white p-4 w-full h-56 fixed top-0 left-0 flex flex-col items-center justify-center">
-        <NavLink to="/" className="cursor-pointer mt-4 hover:text-gray-400">
-          Home
-        </NavLink>
-        <NavLink to="/collection" className="cursor-pointer mt-4 hover:text-gray-400">
-          Collection
-        </NavLink>
-        <NavLink to="/about" className="cursor-pointer mt-4 hover:text-gray-400">
-          About Us
-        </NavLink>
-        <NavLink to="/contact" className="cursor-pointer mt-4 hover:text-gray-400">
-          Contact Us
-        </NavLink>
-      </div>
+      {isMenuOpen && (
+         <div
+         className={`md:hidden bg-primary text-white p-4 w-full h-80 fixed top-15 left-0 flex flex-col px-10 items-center justify-center 
+         transform transition-transform duration-2000 ease-in-out 
+         ${isMenuOpen ? "translate-y-0 opacity-100" : "translate-x-full opacity-0"}`}
+        >
+        
+         <NavLink to="/" className="cursor-pointer  hover:text-gray-400 transition duration-300">
+           HOME
+         </NavLink>
+         <NavLink to="/Doctor" className="cursor-pointer mt-6 hover:text-gray-400 transition duration-300">
+           ALL_DOCTORS
+         </NavLink>
+         <NavLink to="/about" className="cursor-pointer mt-6 hover:text-gray-400 transition duration-300">
+           ABOUT US
+         </NavLink>
+         <NavLink to="/contact" className="cursor-pointer mt-6 hover:text-gray-400 transition duration-300">
+           CONTACT US
+         </NavLink>
+       </div>
       )}
+      
+      
     </div>
   )
 }
